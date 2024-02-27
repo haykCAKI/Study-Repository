@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculator Simplex</h1>
+    <form action="calculator" method="post">
+        <ul>
+            <li>
+                <label for="valor1">Primeiro Valor: </label>
+                <input type="text" id="valor1">
+            </li>
+            <li>
+                <label for="operacao">Escolha a sua operação</label>
+                <select id="operacao">
+                    <option value="+">Adição</option>
+                    <option value="-">Subtração</option>
+                    <option value="*">Multiplicação</option>
+                    <option value="/">Divisão</option>
+                </select>
+            </li>
+            <li>
+                <label for="valor2">Segundo Valor</label>
+                <input type="text" id="valor2">
+            </li>
+            <input type="button" value="calcular" onclick="Calcular()">
+            <input type="button" value="Limpar" onclick="Limpar()">
+        </ul>
+        
+    </form>
+    <p id="saida"></p>
+</body>
+</html>

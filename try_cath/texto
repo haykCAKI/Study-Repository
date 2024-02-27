@@ -1,0 +1,19 @@
+//try...catch
+//estrutura que permite que executamos um código com o //potencial de falha
+
+
+exemplos:
+
+try{
+    let calcularDivisao = parseInt(prompt('Informe o primeiro Numero: '));
+    let calcularDividendo = parseInt(prompt('Informe o segundo número: '))
+    if(isNaN(calcularDivisao) || isNaN(calcularDividendo)){ 
+        throw Error('Just Number, pls')
+    }
+    let divisao = calcularDivisao / calcularDividendo;
+    console.log(divisao)
+}catch (err){
+    console.log(err.message)
+}finally{
+    console.log('success execute in finally command')
+}

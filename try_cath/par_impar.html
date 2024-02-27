@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            border-style: solid;
+            width: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digite um número e diremos se é par ou impar</h1>
+
+    <button onclick="parOuImpar()">Clique para Iniciar</button>
+
+    <div id="output">O resultado vai aparecer aqui...</div>
+
+    <script>
+
+        const kekw = document.querySelector("#output");
+
+        function parOuImpar() {
+            let num = prompt('Digite um número: ');
+
+            if (isNaN(num)) {
+                throw Error("Digite apenas números");
+            }
+
+            num = parseFloat(num); // Não é necessário reatribuir o valor aqui
+
+            let mensagem = "<br>O número " + num + " que foi digitado é ";
+
+            if (num % 2 == 0) {
+                mensagem += "Par!";
+            } else {
+                mensagem += "Ímpar!";
+            }
+            kekw.innerHTML = mensagem;
+        }
+
+
+        try {
+            parOuImpar()
+        }
+        catch (err) {
+            alert("Deu ruim: " + err.message)
+        }
+
+        alert("Fim do programa");
+
+
+    </script>
+</body>
+
+</html>

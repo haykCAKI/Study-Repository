@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="compos" value="Valor do input">
+
+    <script>
+
+        function idInput(id) {
+
+            const doug = document.querySelector('#' + id)
+
+            if(!doug){
+                throw Error("O id passado por parâmetro não possui elemento no DOM")
+            }
+            return doug.value
+
+        }
+
+        try {
+            const val = idInput("compos")
+            alert(val)
+        } catch (err) {
+            alert("Deu erro: " + err.message)
+        }
+        alert('Fim do programa');
+
+    </script>
+</body>
+
+</html>

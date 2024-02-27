@@ -1,0 +1,45 @@
+DOCUMENT tem 6 tipos de elementos sendo eles:
+métodos:
+
+Element:
+1. getElementById
+descrição: Este método retorna uma referência a um elemento identificado pelo valor exclusivo do 'id';
+exemplos: 
+<div id="minhaDiv">Conteúdo Div</div>
+var elemento = document.getElementById("minhaDiv");
+
+HTMLCOLLECTION:
+2. getElementByTagName
+descrição: Retorna uma coleção de elementos com o nome da tag especificada.
+exemplos:
+<p>Parágrafo 1</p>
+<p>Parágrafo 2</p>
+var elementoParagrafo = document.getElementByTagName('p');
+
+3. getElementByClassName
+descrição: Retorna uma coleção de elementos que possiem a classe CSS especificada. 
+exemplos: 
+<div class="minhaClasse">Div 1</div>
+<div class="minhaClasse">Div 2</div>
+var elementoClasse = document.getElementByClassName('minhaClasse');
+
+4. getElementByName
+descrição: Retorna uma coleção de elementos com o atributo `name` especificado.
+exemplos:
+<input type="text" name="usuario">
+<input type="text" name="senha">
+var elementoNome = document.getElementByName('usando');
+
+Element:
+5. querySelector
+descrição: Retorna o primeiro elemento que corresponde ao seletor CSS especificado.
+exemplos:
+<div id="minhaDiv">Contéudo Div</div>
+var elementoQuery = document.querySelector('#minhaDiv')
+
+Atributo:
+6. innerHTML
+descrição: Propriedade que permite obter ou definir o conteúdo do HTML interno de um elemento.
+exemplos:
+<div id="minhaDiv">Conteúdo Antigo</div>
+var novo = document.getElementById('minhaDiv').innerHTML= 'Trade Win!';

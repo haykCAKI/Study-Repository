@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calcular a Raiz Quadrada SQRT</h1>
+
+    <button onclick="CalculeteSqrt()">Calcule a Raiz</button>
+
+    <h3 id="output">
+        resultado
+    </h3>
+
+    <script>
+        const output = document.getElementById("output");
+
+        function CalculeteSqrt() {
+            let numSqrt = parseInt(prompt('Digite um número: '));
+            num = Math.sqrt(numSqrt);
+
+            if (isNaN(num)) {
+                throw Error("Digite um número e não uma letra, por favor");
+            }
+
+            var mensagem = 'A raiz quadrada de ' + numSqrt + ' vai dar: ' + num;
+            output.innerHTML = mensagem;
+        }
+
+        try {
+            CalculeteSqrt();
+        } catch (err) {
+            alert('Deu ruim: ' + err.message);
+        }
+        alert('Fim do programa');
+    </script>
+</body>
+
+</html>

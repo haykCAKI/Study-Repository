@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgb(212, 210, 210);
+}
+
+form{
+    border-style: solid;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    padding: 4px;
+}
